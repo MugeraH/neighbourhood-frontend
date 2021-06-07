@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HoodsService } from '../services/hoods.service';
+import { HoodsService } from '../services/hood-service/hoods.service';
 import {Hood} from '../interfaces/hood'
 
 @Component({

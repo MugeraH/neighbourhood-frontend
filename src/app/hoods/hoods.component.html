@@ -1,5 +1,22 @@
 <div class="container-fluid m-4">
-  <div class="row" *ngFor="let hood of hoods">
-    <h3>{{hood.hood_name}}</h3>
+  <div class="row" >
+    <div class="col-md-4 " *ngFor="let hood of hoods">
+      <div class="card" style="width: 18rem">
+        <img
+          src="http://res.cloudinary.com/hood/{{ hood.hood_image }}"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ hood.hood_name }}</h5>
+          <p class="card-text">
+            {{ hood.about_hood }}
+          </p>
+          <a href="#" class="btn btn-primary">
+            view
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
