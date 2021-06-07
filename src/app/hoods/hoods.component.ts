@@ -1,15 +1,25 @@
 import { Component, OnInit } from '@angular/core';
+import { HoodsService } from '../services/hoods.service';
+import {Hood} from '../interfaces/hood'
 
 @Component({
   selector: 'app-hoods',
   templateUrl: './hoods.component.html',
-  styleUrls: ['./hoods.component.css']
+  styleUrls: ['./hoods.component.css'],
 })
 export class HoodsComponent implements OnInit {
+  hoods:Hood[] = [];
 
-  constructor() { }
+  constructor(private hoodsService: HoodsService) {}
 
-  ngOnInit(): void {
+  getHoods() {
+    this.hoodsService.getHoodsData().subscribe((data) => {
+      this.hoods = data;
+      console.log(this.hoods);
+    });
   }
 
+  ngOnInit(): void {
+    this.getHoods();
+  }
 }

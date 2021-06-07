@@ -1,7 +1,10 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
+
+
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { HoodsComponent } from './hoods/hoods.component';
@@ -16,13 +19,10 @@ import { BusinessCreateComponent } from './business-create/business-create.compo
     HoodsComponent,
     HoodDetailComponent,
     BusinessDetailComponent,
-    BusinessCreateComponent
+    BusinessCreateComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
