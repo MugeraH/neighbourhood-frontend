@@ -19,6 +19,7 @@ export class HoodsComponent implements OnInit {
     });
   }
 
+
   ngOnInit(): void {
     this.getHoods();
   }

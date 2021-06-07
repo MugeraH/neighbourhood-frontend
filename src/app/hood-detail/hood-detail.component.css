@@ -1,0 +1,12 @@
+
+
+.intro-image img{
+    height: 500px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.hood-details{
+    display: flex;
+    gap: 10px;
+}

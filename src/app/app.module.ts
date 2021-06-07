@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
@@ -11,6 +11,7 @@ import { HoodsComponent } from './hoods/hoods.component';
 import { HoodDetailComponent } from './hood-detail/hood-detail.component';
 import { BusinessDetailComponent } from './business-detail/business-detail.component';
 import { BusinessCreateComponent } from './business-create/business-create.component';
+import { BusinessComponent } from './business/business.component';
 
 @NgModule({
   declarations: [
@@ -20,8 +21,15 @@ import { BusinessCreateComponent } from './business-create/business-create.compo
     HoodDetailComponent,
     BusinessDetailComponent,
     BusinessCreateComponent,
+    BusinessComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

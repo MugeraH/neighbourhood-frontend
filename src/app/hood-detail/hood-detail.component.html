@@ -1,1 +1,21 @@
-<p>hood-detail works!</p>
+<div class="container-fluid pt-4 pb-5">
+  <div class="intro-image">
+    <img src="http://res.cloudinary.com/hood/{{ hood.hood_image }}" alt="" />
+  </div>
+
+  <h3>{{ hood.hood_name }}</h3>
+
+  <div class="hood-details">
+    <div class="about-hood">
+      {{ hood.about_hood }}
+    </div>
+    <div class="hood-info">
+      <p>Occupants count:{{ hood.occupants_count }}</p>
+      <p>health_tell:{{ hood.health_tell }}</p>
+      <p>police_number:{{ hood.police_number }}</p>
+    </div>
+  </div>
+  <div class="business-wrapper">
+    <app-business></app-business>
+  </div>
+</div>
