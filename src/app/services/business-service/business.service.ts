@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
+
 import { Observable } from 'rxjs';
 
 const baseurl = 'http://localhost:8000/business/';
@@ -20,8 +21,9 @@ export class BusinessService {
     business_name: string;
     business_email: string;
     about_business: string;
-    neighbourhood: any
+    neighbourhood: any;
   }) {
+ 
     return this.http.post(baseurl, data);
   }
 }

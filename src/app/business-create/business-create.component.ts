@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { BusinessService } from '../services/business-service/business.service';
-import { ActivatedRoute ,Router} from '@angular/router';   
+import { ActivatedRoute, Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-business-create',
@@ -14,7 +15,8 @@ export class BusinessCreateComponent implements OnInit {
   constructor(
     private businessService: BusinessService,
     private router: ActivatedRoute,
-    private redirect:Router
+    private redirect: Router,
+    private toastr: ToastrService
   ) {}
 
   ngOnInit(): void {
@@ -22,7 +24,6 @@ export class BusinessCreateComponent implements OnInit {
       business_name: new FormControl(''),
       business_email: new FormControl(''),
       about_business: new FormControl(''),
-    
     });
   }
 
@@ -41,11 +42,12 @@ export class BusinessCreateComponent implements OnInit {
     this.businessService.addBusiness(data).subscribe(
       (response) => {
         console.log(response);
+
+        this.toastr.success('New Business saved successfully');
         this.redirect.navigate([
           '/hood',
           this.router.snapshot.paramMap.get('id'),
         ]);
-        
       },
       (error) => {
         console.log(error);
