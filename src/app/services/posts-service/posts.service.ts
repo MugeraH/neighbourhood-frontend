@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-const baseUrl = 'http://localhost:8000/posts/';
+const baseUrl = 'http://localhost:8000/posts';
 const hoodPostUrl = 'http://localhost:8000/hood/posts';
 
 @Injectable({
@@ -15,6 +15,10 @@ export class PostsService {
     return this.http.get(`${baseUrl}`);
   }
 
+  getPost(id: any): Observable<any> {
+    return this.http.get(`${baseUrl}/${id}`);
+  }
+
   getHoodPosts(id: any): Observable<any> {
     return this.http.get(`${hoodPostUrl}/${id}`);
   }
@@ -23,18 +27,11 @@ export class PostsService {
     return this.http.post(baseUrl, data);
   }
 
-  // updateBusiness(
-  //   id: any,
-  //   data: {
-  //     business_name: string;
-  //     business_email: string;
-  //     about_business: string;
-  //   }
-  // ) {
-  //   return this.http.put(`${baseUrl}/${id}`, data);
-  // }
+  updatePost(id: any, data: { title: string; post: string;}) {
+    return this.http.put(`${baseUrl}/${id}`, data);
+  }
 
-  // deletePost(id: any) {
-  //   return this.http.delete(`${baseUrl}/${id}`);
-  // }
+  deletePost(id: any) {
+    return this.http.delete(`${baseUrl}/${id}`);
+  }
 }

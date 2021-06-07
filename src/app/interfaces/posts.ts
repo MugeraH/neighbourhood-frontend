@@ -3,5 +3,5 @@ export interface Posts {
   title: string;
   post: string;
   user: any;
-  neighbourhood: any;
+  hood: any;
 }

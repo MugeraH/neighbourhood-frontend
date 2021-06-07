@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';   
 import { ToastrService } from 'ngx-toastr';
-import { Posts } from '../interfaces/posts';
+
 
 import { PostsService } from '../services/posts-service/posts.service';
 

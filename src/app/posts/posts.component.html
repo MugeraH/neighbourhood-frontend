@@ -5,7 +5,7 @@
     >
   </div>
   <div class="row">
-    <div class="col-md-4" *ngFor="let post of posts">
+    <div class="col-md-12" *ngFor="let post of posts">
       <div class="card" style="width: 18rem">
         <div class="card-body">
           <h5 class="card-title">{{ post.title }}</h5>
@@ -16,7 +16,7 @@
           <a [routerLink]="['/update_post', post.id]" class="card-link"
             >update</a
           >
-          <!-- <a href="#" class="card-link" (click)= "deleteSelectedBusiness(post.id)" >Delete</a> -->
+          <button class="card-link" (click)="deleteSelectedPost(post.id)">Delete</button>
         </div>
       </div>
     </div>

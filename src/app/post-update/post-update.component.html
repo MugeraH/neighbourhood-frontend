@@ -1,1 +1,30 @@
-<p>post-update works!</p>
+<div class="container">
+  <div class="form mt-4">
+    <h2>Add business</h2>
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="post-title">Title</label>
+        <input
+          type="text"
+          formControlName="title"
+          class="form-control"
+          [(ngModel)]="post.title"
+          id="post-title"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="post">Post</label>
+        <textarea
+          type="text"
+          formControlName="post"
+          class="form-control"
+          [(ngModel)]="post.post"
+          id="post"
+        ></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Update</button>
+    </form>
+  </div>
+</div>

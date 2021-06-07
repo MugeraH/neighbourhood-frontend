@@ -19,7 +19,12 @@
           <a [routerLink]="['/update_business', business.id]" class="card-link"
             >update</a
           >
-          <a href="#" class="card-link" (click)= "deleteSelectedBusiness(business.id)" >Delete</a>
+          <button
+            class="card-link"
+            (click)="deleteSelectedBusiness(business.id)"
+          >
+            Delete
+          </button>
         </div>
       </div>
     </div>

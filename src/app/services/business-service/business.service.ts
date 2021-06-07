@@ -30,7 +30,7 @@ export class BusinessService {
   }
 
   updateBusiness(
-    id:any,
+    id: any,
     data: {
       business_name: string;
       business_email: string;
@@ -40,8 +40,7 @@ export class BusinessService {
     return this.http.put(`${baseUrl}/${id}`, data);
   }
 
-  deleteBusiness(id:any){
+  deleteBusiness(id: any) {
     return this.http.delete(`${baseUrl}/${id}`);
   }
-  
 }

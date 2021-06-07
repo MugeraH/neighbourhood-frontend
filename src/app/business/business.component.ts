@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute ,Router} from '@angular/router';
 import { Input } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 
 import { BusinessService } from '../services/business-service/business.service';
 import { Business } from '../interfaces/business';
@@ -16,7 +17,9 @@ export class BusinessComponent implements OnInit {
   businesses: Business[];
   constructor(
     private businessService: BusinessService,
-    private router: ActivatedRoute
+    private router: ActivatedRoute,
+    private redirect: Router,
+    private toastr: ToastrService
   ) {}
 
   getHoodBusinesses() {
@@ -27,9 +30,12 @@ export class BusinessComponent implements OnInit {
   }
 
   deleteSelectedBusiness(id: any) {
-    this.businessService.deleteBusiness(id).subscribe((data) => {
-      console.log(data);
-    });
+    this.businessService.deleteBusiness(id).subscribe((data) => {});
+
+    this.getHoodBusinesses();
+
+    this.toastr.error('New Post deleted successfully');
+    this.redirect.navigate(['/hood', this.router.snapshot.paramMap.get('id')]);
   }
 
   ngOnInit(): void {
