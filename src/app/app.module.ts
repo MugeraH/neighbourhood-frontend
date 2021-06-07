@@ -11,10 +11,13 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { HoodsComponent } from './hoods/hoods.component';
 import { HoodDetailComponent } from './hood-detail/hood-detail.component';
-import { BusinessDetailComponent } from './business-detail/business-detail.component';
+
 import { BusinessCreateComponent } from './business-create/business-create.component';
 import { BusinessComponent } from './business/business.component';
 import { BusinessUpdateComponent } from './business-update/business-update.component';
+import { PostsComponent } from './posts/posts.component';
+import { PostCreateComponent } from './post-create/post-create.component';
+import { PostUpdateComponent } from './post-update/post-update.component';
 
 @NgModule({
   declarations: [
@@ -22,10 +25,13 @@ import { BusinessUpdateComponent } from './business-update/business-update.compo
     HomeComponent,
     HoodsComponent,
     HoodDetailComponent,
-    BusinessDetailComponent,
+   
     BusinessCreateComponent,
     BusinessComponent,
     BusinessUpdateComponent,
+    PostsComponent,
+    PostCreateComponent,
+    PostUpdateComponent,
   ],
   imports: [
     BrowserModule,
