@@ -5,6 +5,7 @@ import { BusinessUpdateComponent } from './business-update/business-update.compo
 import { HomeComponent } from './home/home.component';
 import { HoodDetailComponent } from './hood-detail/hood-detail.component';
 import { HoodsComponent } from './hoods/hoods.component';
+import { PostCreateComponent } from './post-create/post-create.component';
 import { PostUpdateComponent } from './post-update/post-update.component';
 import { PostsComponent } from './posts/posts.component';
 
@@ -15,9 +16,9 @@ const routes: Routes = [
   {path:'add_business/:id',component:BusinessCreateComponent},
   {path:'update_business/:id',component:BusinessUpdateComponent},
 
-  {path:'add_post/:id',component:PostsComponent},
+  {path:'add_post/:id',component:PostCreateComponent},
   {path:'update_post/:id',component:PostUpdateComponent},
-  
+
 ];
 
 @NgModule({

@@ -18,4 +18,23 @@ export class PostsService {
   getHoodPosts(id: any): Observable<any> {
     return this.http.get(`${hoodPostUrl}/${id}`);
   }
+
+  addPost(data: { title: string; post: string; hood: string }) {
+    return this.http.post(baseUrl, data);
+  }
+
+  // updateBusiness(
+  //   id: any,
+  //   data: {
+  //     business_name: string;
+  //     business_email: string;
+  //     about_business: string;
+  //   }
+  // ) {
+  //   return this.http.put(`${baseUrl}/${id}`, data);
+  // }
+
+  // deletePost(id: any) {
+  //   return this.http.delete(`${baseUrl}/${id}`);
+  // }
 }
