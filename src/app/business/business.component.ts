@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import {Input} from '@angular/core'
- 
+import { Input } from '@angular/core';
 
 import { BusinessService } from '../services/business-service/business.service';
 import { Business } from '../interfaces/business';
@@ -24,6 +23,12 @@ export class BusinessComponent implements OnInit {
     this.id = this.router.snapshot.paramMap.get('id');
     this.businessService.getHoodBusinessData(this.id).subscribe((data) => {
       this.businesses = data;
+    });
+  }
+
+  deleteSelectedBusiness(id: any) {
+    this.businessService.deleteBusiness(id).subscribe((data) => {
+      console.log(data);
     });
   }
 

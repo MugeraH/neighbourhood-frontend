@@ -14,6 +14,7 @@ import { HoodDetailComponent } from './hood-detail/hood-detail.component';
 import { BusinessDetailComponent } from './business-detail/business-detail.component';
 import { BusinessCreateComponent } from './business-create/business-create.component';
 import { BusinessComponent } from './business/business.component';
+import { BusinessUpdateComponent } from './business-update/business-update.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { BusinessComponent } from './business/business.component';
     BusinessDetailComponent,
     BusinessCreateComponent,
     BusinessComponent,
+    BusinessUpdateComponent,
   ],
   imports: [
     BrowserModule,

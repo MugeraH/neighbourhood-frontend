@@ -1,6 +1,6 @@
 <div class="container">
   <div>
-    <a [routerLink]="['/add_business',hood.id]" class="btn btn-success m-2">
+    <a [routerLink]="['/add_business', hood.id]" class="btn btn-success m-2">
       Add business</a
     >
   </div>
@@ -16,8 +16,10 @@
             Some quick example text to build on the card title and make up the
             bulk of the card's content.
           </p>
-          <a href="#" class="card-link">update</a>
-          <a href="#" class="card-link">Delete</a>
+          <a [routerLink]="['/update_business', business.id]" class="card-link"
+            >update</a
+          >
+          <a href="#" class="card-link" (click)= "deleteSelectedBusiness(business.id)" >Delete</a>
         </div>
       </div>
     </div>
