@@ -20,6 +20,7 @@ export class BusinessService {
     business_name: string;
     business_email: string;
     about_business: string;
+    neighbourhood: any
   }) {
     return this.http.post(baseurl, data);
   }

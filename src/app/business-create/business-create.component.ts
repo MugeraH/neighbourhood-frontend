@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { BusinessService } from '../services/business-service/business.service';
+import { ActivatedRoute ,Router} from '@angular/router';   
 
 @Component({
   selector: 'app-business-create',
@@ -10,13 +11,18 @@ import { BusinessService } from '../services/business-service/business.service';
 export class BusinessCreateComponent implements OnInit {
   myForm: FormGroup;
 
-  constructor(private businessService: BusinessService) {}
+  constructor(
+    private businessService: BusinessService,
+    private router: ActivatedRoute,
+    private redirect:Router
+  ) {}
 
   ngOnInit(): void {
     this.myForm = new FormGroup({
       business_name: new FormControl(''),
       business_email: new FormControl(''),
       about_business: new FormControl(''),
+    
     });
   }
 
@@ -29,11 +35,17 @@ export class BusinessCreateComponent implements OnInit {
       business_name: this.f.business_name.value,
       business_email: this.f.business_email.value,
       about_business: this.f.about_business.value,
+      neighbourhood: this.router.snapshot.paramMap.get('id'),
     };
 
     this.businessService.addBusiness(data).subscribe(
       (response) => {
         console.log(response);
+        this.redirect.navigate([
+          '/hood',
+          this.router.snapshot.paramMap.get('id'),
+        ]);
+        
       },
       (error) => {
         console.log(error);

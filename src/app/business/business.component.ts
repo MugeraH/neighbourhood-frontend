@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import {Input} from '@angular/core'
+ 
 
-import {BusinessService} from '../services/business-service/business.service'
-import {Business} from '../interfaces/business'
+import { BusinessService } from '../services/business-service/business.service';
+import { Business } from '../interfaces/business';
 
 @Component({
   selector: 'app-business',
@@ -10,6 +12,7 @@ import {Business} from '../interfaces/business'
   styleUrls: ['./business.component.css'],
 })
 export class BusinessComponent implements OnInit {
+  @Input() hood;
   id: any;
   businesses: Business[];
   constructor(

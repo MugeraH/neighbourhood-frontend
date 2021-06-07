@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HoodsService } from '../services/hood-service/hoods.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';    
 import { Hood } from '../interfaces/hood';
 
 @Component({
