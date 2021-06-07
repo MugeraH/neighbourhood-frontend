@@ -15,7 +15,12 @@
       <p>police_number:{{ hood.police_number }}</p>
     </div>
   </div>
-  <div class="business-wrapper">
-    <app-business [hood]="hood"></app-business>
+  <div class="details-wrapper">
+    <div class="business-wrapper">
+      <app-business [hood]="hood"></app-business>
+    </div>
+    <div class="posts-wrapper">
+      <app-posts [hood]="hood"></app-posts>
+    </div>
   </div>
 </div>

@@ -1,12 +1,23 @@
-
-
-.intro-image img{
-    height: 500px;
-    width: 100%;
-    object-fit: cover;
+.intro-image img {
+  height: 500px;
+  width: 100%;
+  object-fit: cover;
 }
 
-.hood-details{
-    display: flex;
-    gap: 10px;
+.hood-details {
+  display: flex;
+  gap: 10px;
+}
+
+.details-wrapper {
+  display: flex;
+}
+
+.business-wrapper {
+  flex: 3.5;
+  
+}
+.posts-wrapper {
+  flex: 2;
+ 
 }

@@ -1,1 +1,24 @@
-<p>posts works!</p>
+<div class="container">
+  <div>
+    <a [routerLink]="['/add_post', hood.id]" class="btn btn-success m-2">
+      Add Posts</a
+    >
+  </div>
+  <div class="row">
+    <div class="col-md-4" *ngFor="let post of posts">
+      <div class="card" style="width: 18rem">
+        <div class="card-body">
+          <h5 class="card-title">{{ post.title }}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">
+            {{ post.post }}
+          </h6>
+
+          <a [routerLink]="['/update_post', post.id]" class="card-link"
+            >update</a
+          >
+          <!-- <a href="#" class="card-link" (click)= "deleteSelectedBusiness(post.id)" >Delete</a> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
