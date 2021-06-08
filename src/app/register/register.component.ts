@@ -40,8 +40,6 @@ export class RegisterComponent implements OnInit {
 
     this.authService.userRegister(data).subscribe(
       (response) => {
-        console.log(response);
-
         this.toastr.success('Registration successfull');
         this.redirect.navigate(['login']);
       },

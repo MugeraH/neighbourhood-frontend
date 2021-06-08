@@ -11,6 +11,7 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class LoginComponent implements OnInit {
   myForm: FormGroup;
+  isAuthenticated: boolean = false;
 
   constructor(
     private authService: AuthService,
@@ -38,14 +39,14 @@ export class LoginComponent implements OnInit {
 
     this.authService.userLogin(data).subscribe(
       (response) => {
-        console.log(response);
-         this.toastr.success('Login successfull');
+        this.toastr.success('Login successfull');
         this.redirect.navigate(['home']);
+        this.isAuthenticated = true;
       },
       (error) => {
-        console.log(error);
-         this.toastr.error('Login unsuccessfull');
-          this.toastr.info(error);
+       
+        this.toastr.error('Login unsuccessfull');
+        this.toastr.info('Please check username and password');
       }
     );
   }

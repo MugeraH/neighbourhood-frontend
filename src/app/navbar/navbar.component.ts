@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from '../services/auth-serivce/auth.service';
 import { ToastrService } from 'ngx-toastr';
+import { Emmiters } from '../emmiters/emmiters';
 
 @Component({
   selector: 'app-navbar',
@@ -9,20 +10,25 @@ import { ToastrService } from 'ngx-toastr';
   styleUrls: ['./navbar.component.css'],
 })
 export class NavbarComponent implements OnInit {
-  user;
+  isAuthenticated: boolean = false;
   constructor(
     private authService: AuthService,
     private redirect: Router,
     private toastr: ToastrService
   ) {}
 
-  getUser() {
-    this.authService.getUser().subscribe((data) => {
-      console.log(data);
-    }); 
+  ngOnInit(): void {
+    Emmiters.authEmmiter.subscribe((auth: boolean) => {
+      this.isAuthenticated = auth;
+    });
   }
 
-  ngOnInit(): void {
-    this.getUser();
+  logout(): void {
+    this.authService.logout().subscribe(() => {
+      // this.toastr.success('Logout successfull');
+      // this.redirect.navigate(['login']);
+      // window.location.reload();
+      this.isAuthenticated = false;
+    });
   }
 }
