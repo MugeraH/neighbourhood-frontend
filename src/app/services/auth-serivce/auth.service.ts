@@ -22,6 +22,6 @@ export class AuthService {
   }
 
   getUser() {
-    return this.http.get(userUrl);
+    return this.http.get(userUrl,{withCredentials:true});
   }
 }
