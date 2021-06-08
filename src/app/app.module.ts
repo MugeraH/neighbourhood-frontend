@@ -18,6 +18,8 @@ import { BusinessUpdateComponent } from './business-update/business-update.compo
 import { PostsComponent } from './posts/posts.component';
 import { PostCreateComponent } from './post-create/post-create.component';
 import { PostUpdateComponent } from './post-update/post-update.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +34,8 @@ import { PostUpdateComponent } from './post-update/post-update.component';
     PostsComponent,
     PostCreateComponent,
     PostUpdateComponent,
+    LoginComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
