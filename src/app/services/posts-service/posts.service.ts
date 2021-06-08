@@ -2,8 +2,9 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-const baseUrl = 'http://localhost:8000/posts';
-const hoodPostUrl = 'http://localhost:8000/hood/posts';
+const baseUrl = 'https://hood-hm.herokuapp.com/posts';
+const hoodPostUrl = 'https://hood-hm.herokuapp.com/hood/posts';
+
 
 @Injectable({
   providedIn: 'root',

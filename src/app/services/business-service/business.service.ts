@@ -3,8 +3,8 @@ import { HttpClient } from '@angular/common/http';
 
 import { Observable } from 'rxjs';
 
-const baseUrl = 'http://localhost:8000/business';
-const hoodBusinessUrl = 'http://localhost:8000/hood/business'; //filters business by neighbourhood
+const baseUrl = 'https://hood-hm.herokuapp.com/business';
+const hoodBusinessUrl = 'https://hood-hm.herokuapp.com/hood/business'; //filters business by neighbourhood
 
 @Injectable({
   providedIn: 'root',

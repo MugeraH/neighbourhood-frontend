@@ -3,10 +3,10 @@ import { HttpClient } from '@angular/common/http';
 
 import { Observable } from 'rxjs';
 
-const loginUrl = 'http://localhost:8000/api/login';
-const logoutUrl = 'http://localhost:8000/api/logout';
-const registerUrl = 'http://localhost:8000/api/register';
-const userUrl = 'http://localhost:8000/api/user';
+const loginUrl = 'https://hood-hm.herokuapp.com/api/login';
+const logoutUrl = 'https://hood-hm.herokuapp.com/api/logout';
+const registerUrl = 'https://hood-hm.herokuapp.com/api/register';
+const userUrl = 'https://hood-hm.herokuapp.com/api/user';
 
 @Injectable({
   providedIn: 'root',

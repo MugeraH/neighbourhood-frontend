@@ -13,11 +13,11 @@ export class HoodsService {
   constructor(private http: HttpClient) {}
 
   getHoodsData(): Observable<any> {
-    return this.http.get('http://localhost:8000/hood/');
+    return this.http.get('https://hood-hm.herokuapp.com/hood/');
   }
 
   getHoodData(id: number): Observable<any> {
-    return this.http.get(`http://localhost:8000/hood/${id}`);
+    return this.http.get(`https://hood-hm.herokuapp.com/hood/${id}`);
   }
 
 }
