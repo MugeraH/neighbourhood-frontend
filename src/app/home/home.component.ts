@@ -20,29 +20,26 @@ export class HomeComponent implements OnInit {
     private toastr: ToastrService
   ) {}
 
-  // getUser() {
-  //   this.authService.getUser().subscribe(
-  //     (data) => {
-  //       if (data) {
-  //         this.user = data;
-  //         this.toastr.success('Login successfull');
-         
+  getUser() {
+    this.authService.getUser().subscribe(
+      (data) => {
+        if (data) {
+          this.user = data;
+          this.toastr.success('Login successfull');
 
-  //         Emmiters.authEmmiter.emit(true);
-  //         console.log(data);
-  //       }
-  //     },
-  //     (error) => {
-  //       console.log(error.error);
-  //       Emmiters.authEmmiter.emit(false);
-  //       this.toastr.error('Your are not logged in');
-  //     }
-  //   );
-  // }
+          Emmiters.authEmmiter.emit(true);
+          console.log(data);
+        }
+      },
+      (error) => {
+        console.log(error.error);
+        Emmiters.authEmmiter.emit(false);
+        this.toastr.error('Your are not logged in');
+      }
+    );
+  }
 
   ngOnInit(): void {
-    // this.getUser();
-
- 
+    this.getUser();
   }
 }
