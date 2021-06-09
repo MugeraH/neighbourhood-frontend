@@ -1,18 +1,20 @@
-<div class="container-fluid pt-4 pb-5">
-  <div class="intro-image">
-    <img src="http://res.cloudinary.com/hood/{{ hood.hood_image }}" alt="" />
+<div class="container-fluid m-0 p-0">
+  <div class="intro">
+    <p class="text-center h2 m-4">{{ hood.hood_name }}</p>
+    <div class="intro-image">
+      <img src="http://res.cloudinary.com/hood/{{ hood.hood_image }}" alt="" />
+    </div>
   </div>
 
-  <h3>{{ hood.hood_name }}</h3>
-
-  <div class="hood-details">
+  <div class="hood-details mt-3">
     <div class="about-hood">
-      {{ hood.about_hood }}
+      <p class="h3">About:</p>
+      <p class="h4">{{ hood.about_hood }}</p>
     </div>
     <div class="hood-info">
-      <p>Occupants count:{{ hood.occupants_count }}</p>
-      <p>health_tell:{{ hood.health_tell }}</p>
-      <p>police_number:{{ hood.police_number }}</p>
+      <p class="h4">Occupants count:{{ hood.occupants_count }}</p>
+      <p class="h4">health_tell:{{ hood.health_tell }}</p>
+      <p class="h4">police_number:{{ hood.police_number }}</p>
     </div>
   </div>
   <div class="details-wrapper">

@@ -1,30 +1,30 @@
-<div class="container">
-  <div>
-    <a [routerLink]="['/add_business', hood.id]" class="btn btn-success m-2">
+<div class="container mb-5">
+  <div class="text-center">
+    <a [routerLink]="['/add_business', hood.id]" class="btn btn-success m-2 ">
       Add business</a
     >
   </div>
   <div class="row">
-    <div class="col-md-4" *ngFor="let business of businesses">
+    <div class="col-md-6 mt-3 mb-3" *ngFor="let business of businesses">
       <div class="card" style="width: 18rem">
         <div class="card-body">
-          <h5 class="card-title">{{ business.business_name }}</h5>
-          <h6 class="card-subtitle mb-2 text-muted">
+          <p class="card-title text-center text-white h3">{{ business.business_name }}</p>
+          <p class="card-subtitle mb-2 text-center text-white h4">
             {{ business.about_business }}
-          </h6>
-          <p class="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
           </p>
-          <a [routerLink]="['/update_business', business.id]" class="card-link"
+       
+          <div class="buttons-wrapper">
+  <a [routerLink]="['/update_business', business.id]" class="btn btn-outline-primary mr-3"
             >update</a
           >
           <button
-            class="card-link"
+            class="btn btn-danger"
             (click)="deleteSelectedBusiness(business.id)"
           >
             Delete
           </button>
+          </div>
+        
         </div>
       </div>
     </div>

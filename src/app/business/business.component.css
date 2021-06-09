@@ -1,0 +1,8 @@
+.card{
+  background-color: black;
+}
+
+.buttons-wrapper{
+    display: flex;
+    justify-content: space-around;
+}

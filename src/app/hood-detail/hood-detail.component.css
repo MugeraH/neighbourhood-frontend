@@ -1,3 +1,11 @@
+.intro {
+  position: relative;
+}
+
+.intro p {
+  font-size: 40px;
+  font-weight: 500;
+}
 .intro-image img {
   height: 500px;
   width: 100%;
@@ -6,7 +14,19 @@
 
 .hood-details {
   display: flex;
-  gap: 10px;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom:20px;
+}
+
+.about-hood {
+  width: 60%;
+  border-right: 3px solid black;
+  text-align: center;
+  padding: 20px
+}
+.hood-info {
+  padding: 20px
 }
 
 .details-wrapper {
@@ -15,9 +35,9 @@
 
 .business-wrapper {
   flex: 3.5;
-  
 }
 .posts-wrapper {
   flex: 2;
- 
 }
+
+
