@@ -1,12 +1,17 @@
-<div class="container-fluid mt-5">
+<div class="container-fluid m-0 p-0">
   <div class="main-wrapper">
-    <!-- <div class="intro-text text-center">
+    <div class="intro-vid mb-4">
+      <video id="video" [muted]="'muted'" autoplay="autoplay" loop="loop">
+        <source
+          src="https://res.cloudinary.com/djx2didgg/video/upload/v1623203727/Toll_Brothers_neighborhood_isvzax.mp4"
+          type="video/mp4"
+        />
+      </video>
+    </div>
+    <div class="intro-text text-center mb-5">
       <h3>Welcome to Neighbourhood Watch</h3>
       <h4>Join a hood to stay in the loop</h4>
       <a routerLink="/hoods" class="btn btn-outline-success">Explore</a>
-    </div> -->
-    <div class="intro-vid text-center mt-3">
-      <img src="../assets/images/download.png" alt="" />
     </div>
   </div>
 </div>

@@ -8,3 +8,13 @@
   padding: 20px;
   border-radius: 5px;
 }
+
+
+/* *{
+  overflow: hidden;
+  
+} */
+
+.container-fluid{
+  height: 100%;
+}
