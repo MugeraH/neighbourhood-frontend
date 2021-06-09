@@ -1,18 +1,19 @@
-<div class="container-fluid m-4">
-  <div class="row" >
-    <div class="col-md-4 " *ngFor="let hood of hoods">
-      <div class="card" style="width: 18rem">
+<div class="container-fluid p-4">
+  <p class="h2 text-center m-3">Welcome to Neighbourhoods</p>
+  <div class="row">
+    <div class="col-md-4 m-0" *ngFor="let hood of hoods">
+      <div class="card">
         <img
           src="http://res.cloudinary.com/hood/{{ hood.hood_image }}"
           class="card-img-top"
           alt="..."
         />
-        <div class="card-body">
-          <h5 class="card-title">{{ hood.hood_name }}</h5>
-          <p class="card-text">
+        <div class="card-body text-center">
+          <h5 class="card-title text-white">{{ hood.hood_name |uppercase}}</h5>
+          <p class="card-text m-1 p-0 text-white">
             {{ hood.about_hood }}
           </p>
-          <a href="#" [routerLink] = "['/hood',hood.id]" class="btn btn-primary">
+          <a href="#" [routerLink]="['/hood', hood.id]" class="btn btn-primary mt-2">
             view
           </a>
         </div>
