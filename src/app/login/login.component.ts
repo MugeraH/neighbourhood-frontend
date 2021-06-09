@@ -20,6 +20,7 @@ export class LoginComponent implements OnInit {
     private toastr: ToastrService
   ) {}
 
+
   ngOnInit(): void {
     this.myForm = new FormGroup({
       username: new FormControl(''),
@@ -39,15 +40,17 @@ export class LoginComponent implements OnInit {
 
     this.authService.userLogin(data).subscribe(
       (response) => {
-        this.toastr.success('Login successfull');
+        // this.toastr.success('Login successfull');
         this.redirect.navigate(['home']);
         this.isAuthenticated = true;
+        console.log(response);
       },
       (error) => {
-       
         this.toastr.error('Login unsuccessfull');
         this.toastr.info('Please check username and password');
       }
     );
+
+   
   }
 }
